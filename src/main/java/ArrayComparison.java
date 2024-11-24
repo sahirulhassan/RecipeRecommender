@@ -19,7 +19,7 @@ public class ArrayComparison {
         // Check if any element of arr1 exists in arr2
         for (String element1 : arr1) {
             for (String element2 : arr2) {
-                if (element1.equals(element2)) {
+                if (element1.equalsIgnoreCase(element2)) {
                     return true;  // Partial match found
                 }
             }
@@ -27,20 +27,30 @@ public class ArrayComparison {
         return false;  // No partial match found
     }
 
-    public static boolean isArraySubset(String[] larger, String[] smaller) {
-        // For each element in smaller array, check if it exists in the larger array
-        for (String elementSmaller : smaller) {
-            boolean found = false;
-            for (String elementLarger : larger) {
-                if (elementSmaller.equals(elementLarger)) {
-                    found = true;
-                    break;  // Element found in larger array
-                }
-            }
-            if (!found) {
-                return false;  // If any element is not found, return false
+//    public static boolean isArraySubset(String[] larger, String[] smaller) {
+//        // For each element in smaller array, check if it exists in the larger array
+//        for (String elementSmaller : smaller) {
+//            boolean found = false;
+//            for (String elementLarger : larger) {
+//                if (elementSmaller.trim().equalsIgnoreCase(elementLarger.trim())) {
+//                    found = true;
+//                    break;  // Element found in larger array
+//                }
+//            }
+//            if (!found) {
+//                return false;  // If any element is not found, return false
+//            }
+//        }
+//        return true;  // All elements in smaller are found in larger
+//    }
+
+    public static boolean isArraySubset(String[] ingredients, String[] query) {
+        String stringifiedIngredients = String.join(" ", ingredients).toLowerCase();
+        for (String queryIngredient : query) {
+            if (!stringifiedIngredients.contains(queryIngredient.toLowerCase().trim())) {
+                return false;
             }
         }
-        return true;  // All elements in smaller are found in larger
+        return true;
     }
 }

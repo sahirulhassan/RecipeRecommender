@@ -33,6 +33,6 @@ public class RecipeRecommender {
         String[] userValues = userStringArr();
         Table filteredDataset = filter(dataset, userValues);
         System.out.println(filteredDataset.rowCount());
-        //represent the filtered data!
+        View.fullRecipe(filteredDataset.row(0));
     }
 }
