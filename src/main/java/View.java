@@ -2,6 +2,7 @@ import com.fasterxml.jackson.core.JsonProcessingException;
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import tech.tablesaw.columns.Column;
 
 
 public class View {
@@ -43,5 +44,13 @@ public class View {
                         "%s",
                 desc, servings, servingSize, ingredients, steps
         );
+    }
+    public static void recipesList(Table dataset) {
+        Column names = dataset.column("name");
+        int idx = 0;
+        for (Object name : names) {
+            System.out.printf("%3d %s %n", idx, name.toString().trim());
+            idx++;
+        }
     }
 }
