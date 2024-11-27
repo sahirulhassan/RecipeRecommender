@@ -1,6 +1,7 @@
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.columns.Column;
+import utility.Input;
 
 
 public class View {
@@ -18,11 +19,11 @@ public class View {
 
         int servings = row.getInt("servings");
 
-        String servingSize = row.getText("serving_size");
+        String servingSize = row.getText("serving_size").trim();
 
-        String ingredients = row.getText("ingredients_raw");
+        String ingredients = row.getText("ingredients_raw").trim();
 
-        String steps = row.getText("steps");
+        String steps = row.getText("steps").trim();
 
         System.out.printf(
                 centerAlign(String.valueOf(id), 100) + "\n" +
