@@ -35,16 +35,18 @@ public class View {
                         "Ingredients:\n" +
                         "%s\n\n" +
                         "Steps:\n" +
-                        "%s",
+                        "%s\n\n",
                 desc, servings, servingSize, ingredients, steps
         );
     }
     public static void recipesList(Table dataset) {
         Column names = dataset.column("name");
+
         int idx = 0;
         for (Object name : names) {
             System.out.printf("%3d %s %n", idx, name.toString().trim());
             idx++;
         }
+        System.out.printf("%3d Back\n", -1);
     }
 }
