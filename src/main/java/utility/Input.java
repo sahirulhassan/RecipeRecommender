@@ -51,7 +51,6 @@ public class Input {
         for (int i = 0; i < size; i++) {
             arr[i] = scanner.nextLine();
         }
-        scanner.close();
         return arr;
     }
 

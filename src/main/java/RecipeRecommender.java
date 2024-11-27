@@ -1,8 +1,6 @@
-import com.fasterxml.jackson.core.JsonProcessingException;
-import tech.tablesaw.columns.Column;
 import tech.tablesaw.io.csv.CsvReadOptions;
 import tech.tablesaw.api.Table;
-import com.fasterxml.jackson.databind.ObjectMapper;
+import java.util.Scanner;
 import static utility.Input.userStringArr;
 
 
@@ -14,25 +12,17 @@ public class RecipeRecommender {
         return Table.read().csv(options);
     }
 
-    public static Table filter(Table dataset, String[] list) throws JsonProcessingException {
-        Column ingredientsCol = dataset.column("ingredients");
-        ObjectMapper objectMapper = new ObjectMapper();
-        Table filteredDataset = dataset.emptyCopy();
-        for (int i = 0; i < ingredientsCol.size(); i++) {
-            String ingredientsStr = ingredientsCol.get(i).toString();
-            String[] ingredientsArr = objectMapper.readValue(ingredientsStr, String[].class);
-            if(ArrayComparison.isArraySubset(ingredientsArr, list)) {
-                filteredDataset.append(dataset.row(i));
-            }
-        }
-        return filteredDataset;
-    }
-
-    public static void main(String[] args) throws JsonProcessingException {
-        Table dataset = datasetReader("src/main/java/recipes_ingredients.csv");
-        String[] userValues = userStringArr();
-        Table filteredDataset = filter(dataset, userValues);
-        System.out.println(filteredDataset.rowCount());
-        View.fullRecipe(filteredDataset.row(0));
+    public static void main(String[] args) {
+        Table dataset = datasetReader("src/main/resources/dataset_cleaned.csv");
+        Search search = new Search(dataset);
+        String[] userQuery = userStringArr();
+        Table filteredDataset = search.byIngredients(userQuery);
+        //Table filteredDataset = search.byName("pizza");
+        View.recipesList(filteredDataset);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Enter the recipe no.:");
+        int selection = scanner.nextInt();
+        scanner.close();
+        View.fullRecipe(filteredDataset.row(selection));
     }
 }
