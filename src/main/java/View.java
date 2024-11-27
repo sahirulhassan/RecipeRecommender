@@ -1,7 +1,5 @@
-import com.fasterxml.jackson.core.JsonProcessingException;
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
-import com.fasterxml.jackson.databind.ObjectMapper;
 import tech.tablesaw.columns.Column;
 
 
@@ -11,8 +9,7 @@ public class View {
         return " ".repeat(Math.max(padding, 0)) + text + " ".repeat(Math.max(width - text.length() - padding, 0));
     }
 
-    public static void fullRecipe(Row row) throws JsonProcessingException {
-        ObjectMapper objectMapper = new ObjectMapper();
+    public static void fullRecipe(Row row) {
 
         int id = row.getInt("id");
 
@@ -23,13 +20,9 @@ public class View {
 
         String servingSize = row.getText("serving_size");
 
-        String ingredientsRaw = row.getText("ingredients_raw");
-        String[] ingredientsArr = objectMapper.readValue(ingredientsRaw, String[].class);
-        StringBuilder ingredients = new StringBuilder(String.join("\n", ingredientsArr));
+        String ingredients = row.getText("ingredients_raw");
 
-        String stepsRaw = row.getText("steps");
-        String[] stepsArr = objectMapper.readValue(stepsRaw, String[].class);
-        StringBuilder steps = new StringBuilder(String.join("\n", stepsArr));
+        String steps = row.getText("steps");
 
         System.out.printf(
                 centerAlign(String.valueOf(id), 100) + "\n" +
