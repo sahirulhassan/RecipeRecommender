@@ -47,6 +47,6 @@ public class View {
             System.out.printf("%3d %s %n", idx, name.toString().trim());
             idx++;
         }
-        System.out.printf("%3d Back\n", -1);
+        System.out.printf("\n%3d Back\n\n", -1);
     }
 }
