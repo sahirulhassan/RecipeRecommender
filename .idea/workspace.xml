@@ -4,14 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Enhanced search speed by using Tablesaw's where + eval lookup. Also replaced array iterations with Array streams for efficiency.">
+    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Included the main menu.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Use-Case Diagram.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/RecipeRecommender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/RecipeRecommender.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utility/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/utility/Input.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,7 +159,119 @@
       <option name="project" value="LOCAL" />
       <updated>1732664522818</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Removed unused dependencies.">
+      <option name="closed" value="true" />
+      <created>1732717381770</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1732717381771</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Further enhanced the querying methods.">
+      <option name="closed" value="true" />
+      <created>1732717434578</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1732717434578</updated>
+    </task>
+    <task id="LOCAL-00008" summary="Simplified the viewing logic by preprocessing the dataset using Python's Pandas library.">
+      <option name="closed" value="true" />
+      <created>1732717481811</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1732717481811</updated>
+    </task>
+    <task id="LOCAL-00009" summary="Included the use-case Diagram.">
+      <option name="closed" value="true" />
+      <created>1732717512366</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1732717512366</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Organized project structure according to Gradle.">
+      <option name="closed" value="true" />
+      <created>1732717564587</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1732717564587</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Included the use case Diagram.">
+      <option name="closed" value="true" />
+      <created>1732717747018</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1732717747018</updated>
+    </task>
+    <task id="LOCAL-00012" summary="Included the preprocessing logic.">
+      <option name="closed" value="true" />
+      <created>1732720541159</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1732720541159</updated>
+    </task>
+    <task id="LOCAL-00013" summary="Further simplified viewing logic.">
+      <option name="closed" value="true" />
+      <created>1732720565161</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1732720565161</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Included a surpriseMe method that returns a random recipe.">
+      <option name="closed" value="true" />
+      <created>1732720598915</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1732720598915</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Streamlined the input class.">
+      <option name="closed" value="true" />
+      <created>1732731834710</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1732731834710</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Moved logic to other relevant classes.">
+      <option name="closed" value="true" />
+      <created>1732731860819</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1732731860819</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Optimized the search engine.">
+      <option name="closed" value="true" />
+      <created>1732731885344</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1732731885345</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Included an option to go back after viewing the list of filtered recipes.">
+      <option name="closed" value="true" />
+      <created>1732731921775</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1732731921775</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Included the main menu.">
+      <option name="closed" value="true" />
+      <created>1732731954731</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732731954731</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -171,7 +280,21 @@
     <MESSAGE value="Included the method to view recipe list" />
     <MESSAGE value="Deleted ArrayComparison.java" />
     <MESSAGE value="Enhanced search speed by using Tablesaw's where + eval lookup. Also replaced array iterations with Array streams for efficiency." />
-    <option name="LAST_COMMIT_MESSAGE" value="Enhanced search speed by using Tablesaw's where + eval lookup. Also replaced array iterations with Array streams for efficiency." />
+    <MESSAGE value="Removed unused dependencies." />
+    <MESSAGE value="Further enhanced the querying methods." />
+    <MESSAGE value="Simplified the viewing logic by preprocessing the dataset using Python's Pandas library." />
+    <MESSAGE value="Included the use-case Diagram." />
+    <MESSAGE value="Organized project structure according to Gradle." />
+    <MESSAGE value="Included the use case Diagram." />
+    <MESSAGE value="Included the preprocessing logic." />
+    <MESSAGE value="Further simplified viewing logic." />
+    <MESSAGE value="Included a surpriseMe method that returns a random recipe." />
+    <MESSAGE value="Streamlined the input class." />
+    <MESSAGE value="Moved logic to other relevant classes." />
+    <MESSAGE value="Optimized the search engine." />
+    <MESSAGE value="Included an option to go back after viewing the list of filtered recipes." />
+    <MESSAGE value="Included the main menu." />
+    <option name="LAST_COMMIT_MESSAGE" value="Included the main menu." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

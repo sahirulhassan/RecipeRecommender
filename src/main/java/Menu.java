@@ -1,7 +1,7 @@
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.io.csv.CsvReadOptions;
-import utility.Input;
+
 public class Menu {
 
     private static boolean masterLoop;
