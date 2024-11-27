@@ -7,7 +7,7 @@ public class Menu {
     private static boolean masterLoop;
     private static boolean loop;
     private static int selection;
-    private static final Search search = new Search(datasetReader("src/main/resources/dataset_cleaned.csv"));
+    private static final Search search = new Search(datasetReader("src/main/resources/dataset.csv"));
 
     public static Table datasetReader(String filepath) {
         CsvReadOptions options = CsvReadOptions.builder(filepath)
