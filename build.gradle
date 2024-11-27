@@ -13,8 +13,6 @@ dependencies {
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'tech.tablesaw:tablesaw-core:0.43.1'
-    implementation 'com.opencsv:opencsv:5.9'
-    implementation 'com.fasterxml.jackson.core:jackson-databind:2.18.1'
 }
 
 test {
