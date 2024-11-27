@@ -1,7 +1,6 @@
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 import utility.Input;
-
 import java.util.Arrays;
 import java.util.Random;
 
