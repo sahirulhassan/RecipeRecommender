@@ -1,20 +1,33 @@
 plugins {
     id 'java'
+    id 'application'
 }
 
 group = 'pk.edu.uitu'
-version = '1.0-SNAPSHOT'
+version = '1.0'
 
 repositories {
     mavenCentral()
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
     implementation 'tech.tablesaw:tablesaw-core:0.43.1'
+    implementation 'org.slf4j:slf4j-api:2.0.9'
+    implementation 'ch.qos.logback:logback-classic:1.4.12'
 }
 
-test {
-    useJUnitPlatform()
+application {
+    mainClass = 'RecipeRecommender'
+}
+
+jar {
+    manifest {
+        attributes(
+                'Main-Class': application.mainClass // Ensures the main class is specified
+        )
+    }
+    from {
+        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
+    }
+    duplicatesStrategy = DuplicatesStrategy.EXCLUDE
 }
