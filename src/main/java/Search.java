@@ -5,7 +5,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class Search {
-
     private final Table dataset;
 
     public Search(Table dataset) {

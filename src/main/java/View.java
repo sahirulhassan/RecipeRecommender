@@ -38,6 +38,7 @@ public class View {
                 desc, servings, servingSize, ingredients, steps
         );
     }
+
     public static void recipesList(Table dataset) {
         Column names = dataset.column("name");
 
