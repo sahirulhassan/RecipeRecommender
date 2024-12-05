@@ -1,7 +1,7 @@
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 
-import java.util.Arrays;
+import java.util.List;
 import java.util.Random;
 
 public class Search {
@@ -12,11 +12,11 @@ public class Search {
     }
 
     public Table byIngredients() {
-        String[] query = Input.userStringArr();
+        List<String> query = Input.userStringList();
         return dataset
                 .where(dataset
                         .textColumn("ingredients")
-                        .eval(entry -> Arrays.stream(query)
+                        .eval(entry -> query.stream()
                                     .allMatch(queryIngredient -> entry.toLowerCase()
                                             .contains(queryIngredient.toLowerCase()))));
     }
@@ -30,10 +30,10 @@ public class Search {
     }
 
     public Table byKeywords() {
-        String[] keywords = Input.userStringArr();
+        List<String> keywords = Input.userStringList();
         return dataset
                 .where(dataset.textColumn("tags")
-                        .eval(entry -> Arrays.stream(keywords)
+                        .eval(entry -> keywords.stream()
                                 .allMatch(keyword -> entry.toLowerCase()
                                         .contains(keyword.toLowerCase()))));
     }

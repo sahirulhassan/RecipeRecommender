@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Input {
@@ -15,22 +17,18 @@ public class Input {
         return output;
     }
 
-    public static String[] userStringArr() {
-        System.out.println("Enter the number of Strings in your array: ");
-        int size = scanner.nextInt();
-        scanner.nextLine(); // Consume the leftover newline
-        String[] arr = new String[size];
-        System.out.println("Enter the elements of your array; ");
-        for (int i = 0; i < size; i++) {
-            arr[i] = scanner.nextLine();
+    public static List<String> userStringList() {
+        System.out.println("Enter your ingredients or keywords one by one.");
+        System.out.println("Type 'END' when you're finished:");
+        List<String> list = new ArrayList<>();
+        while (true) {
+            String input = scanner.nextLine().trim();
+            if (input.equalsIgnoreCase("end")) {break;}
+            else if (input.isBlank()) {
+                System.out.println("Input cannot be empty. Please try again.");
+            }
+            else {list.add(input);}
         }
-        return arr;
-    }
-
-    public static boolean yesOrNo(String msg) {
-        System.out.println(msg);
-        boolean output = scanner.nextBoolean();
-        scanner.nextLine();
-        return output;
+        return list;
     }
 }
