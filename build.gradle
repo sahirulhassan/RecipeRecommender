@@ -14,8 +14,6 @@ dependencies {
     implementation 'tech.tablesaw:tablesaw-core:0.43.1'
     implementation 'org.slf4j:slf4j-api:2.0.9'
     implementation 'ch.qos.logback:logback-classic:1.4.12'
-    testImplementation 'org.mockito:mockito-core:5.14.2'
-    testImplementation 'org.junit.jupiter:junit-jupiter:5.10.0'
 }
 
 application {
