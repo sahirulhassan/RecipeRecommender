@@ -29,6 +29,10 @@ public class Input {
             }
             else {list.add(input);}
         }
+        if (list.size() < 2) {
+            System.out.println("Enter at least 2 ingredients or keywords.");
+            return userStringList(); //recursive call for another try.
+        }
         return list;
     }
 }

@@ -6,23 +6,23 @@ import tech.tablesaw.columns.Column;
 public class View {
     public static String centerAlign(String text, int width) {
         int padding = (width - text.length()) / 2;
-        return " ".repeat(Math.max(padding, 0)) + text + " ".repeat(Math.max(width - text.length() - padding, 0));
+        return " ".repeat(Math.max(padding, 0)) + text + " ".repeat(Math.max(padding, 0));
     }
 
-    public static void fullRecipe(Row row) {
+    public static void fullRecipe(Row recipe) {
 
-        int id = row.getInt("id");
+        int id = recipe.getInt("id");
 
-        String name = row.getText("name").trim();
-        String desc = row.getText("description").trim();
+        String name = recipe.getText("name").trim();
+        String desc = recipe.getText("description").trim();
 
-        int servings = row.getInt("servings");
+        int servings = recipe.getInt("servings");
 
-        String servingSize = row.getText("serving_size").trim();
+        String servingSize = recipe.getText("serving_size").trim();
 
-        String ingredients = row.getText("ingredients_raw").trim();
+        String ingredients = recipe.getText("ingredients_raw").trim();
 
-        String steps = row.getText("steps").trim();
+        String steps = recipe.getText("steps").trim();
 
         System.out.printf(
                 centerAlign(String.valueOf(id), 100) + "\n" +
@@ -40,7 +40,7 @@ public class View {
     }
 
     public static void recipesList(Table dataset) {
-        Column names = dataset.column("name");
+        Column<String> names = dataset.textColumn("name");
 
         int idx = 0;
         for (Object name : names) {
