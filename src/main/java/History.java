@@ -13,10 +13,14 @@ public class History {
     }
 
     public void add(Row recipe) {
-        if (history.size() == maxSize) {
+        if (history.size() == maxSize) { // Remove the last recipe if the history is full
             history.removeLast();
         }
-        history.addFirst(recipe);
+        if (history.contains(recipe)) { // Remove the recipe if it already exists in the history
+            history.remove(recipe);
+        }
+
+        history.addFirst(recipe); // Add the recipe to the beginning of the list
     }
 
     public void viewList() {
