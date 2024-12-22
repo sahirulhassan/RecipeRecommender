@@ -6,6 +6,10 @@ import java.util.List;
 
 
 public class View {
+    public static RecipesList history = new RecipesList(10);
+    public static RecipesList saved = new RecipesList(20);
+
+
     public static String centerAlign(String text, int width) {
         int padding = (width - text.length()) / 2;
         return " ".repeat(Math.max(padding, 0)) + text + " ".repeat(Math.max(padding, 0));
@@ -39,6 +43,8 @@ public class View {
                         "%s\n\n",
                 desc, servings, servingSize, ingredients, steps
         );
+
+
     }
 
     public static void recipesList(Table dataset) {

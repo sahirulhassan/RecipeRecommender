@@ -4,8 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Included options to backtrack through the menus more easily.">
-      <change beforePath="$PROJECT_DIR$/src/main/java/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/History.java" afterDir="false" />
+    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="If a recipe is already in the recently viewed. It is removed and added at the top.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/History.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +40,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -159,7 +162,7 @@
       <workItem from="1733523363800" duration="723000" />
       <workItem from="1733564291353" duration="3319000" />
       <workItem from="1733859087103" duration="112000" />
-      <workItem from="1734881348035" duration="8725000" />
+      <workItem from="1734881348035" duration="10238000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit.">
       <option name="closed" value="true" />
@@ -401,11 +404,18 @@
       <option name="project" value="LOCAL" />
       <updated>1734890104003</updated>
     </task>
-    <option name="localTasksCounter" value="31" />
+    <task id="LOCAL-00031" summary="If a recipe is already in the recently viewed. It is removed and added at the top.">
+      <option name="closed" value="true" />
+      <created>1734890350763</created>
+      <option name="number" value="00031" />
+      <option name="presentableId" value="LOCAL-00031" />
+      <option name="project" value="LOCAL" />
+      <updated>1734890350763</updated>
+    </task>
+    <option name="localTasksCounter" value="32" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Removed unused dependencies." />
     <MESSAGE value="Further enhanced the querying methods." />
     <MESSAGE value="Simplified the viewing logic by preprocessing the dataset using Python's Pandas library." />
     <MESSAGE value="Included the use-case Diagram." />
@@ -430,7 +440,8 @@
     <MESSAGE value="Switched user inputs from Array to ArrayList." />
     <MESSAGE value="Did some refactoring and included the recently viewed recipes feature." />
     <MESSAGE value="Included options to backtrack through the menus more easily." />
-    <option name="LAST_COMMIT_MESSAGE" value="Included options to backtrack through the menus more easily." />
+    <MESSAGE value="If a recipe is already in the recently viewed. It is removed and added at the top." />
+    <option name="LAST_COMMIT_MESSAGE" value="If a recipe is already in the recently viewed. It is removed and added at the top." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
