@@ -33,11 +33,7 @@ public class Menu {
                     View.fullRecipe(surprise);
                     break;
                 case 3:
-                    history.viewList();
-                    selection = Input.intInput("Enter -1 to go back or select the recipe no. to view it.");
-                    if (selection != -1) {
-                        history.viewRecipe(selection);
-                    }
+                    historyMenu();
                     break;
                 case 4:
                     System.out.println(View.centerAlign("Goodbye! Exiting...", 100));
@@ -57,6 +53,7 @@ public class Menu {
 
     private static void searchMenu() throws Exception {
         while (true) {
+            System.out.println(View.centerAlign("Search Menu", 100));
             System.out.print("1. Search by Ingredients\n2. Search by Recipe Names\n3. Search by Keywords\n4. Back\n");
             selection = Input.intInput("Select from the menu:");
             Table filteredDataset;
@@ -77,7 +74,14 @@ public class Menu {
                     throw new Exception("Select a valid option.");
             }
             while (true) {
+                if (filteredDataset == null) {
+                    break;
+                }
                 System.out.println(View.centerAlign("Found Results", 100));
+                if (filteredDataset.isEmpty()) {
+                    System.out.println(View.centerAlign("No recipes found.\n", 100));
+                    break;
+                }
                 View.recipesList(filteredDataset);
                 int recipeNo = Input.intInput("Enter -1 to go back or select the recipe no. to view it.");
                 if (recipeNo == -1) {
@@ -95,6 +99,30 @@ public class Menu {
                         return;
                 }
             }
+            System.out.println("Going back to the Search Menu...");
         }
+    }
+
+    public static void historyMenu() {
+        while (true) {
+            history.viewList();
+            if (history.isEmpty()) {
+                break;
+            }
+            selection = Input.intInput("Enter -1 to go back or select the recipe no. to view it.");
+            if (selection == -1) {
+                break;
+            }
+            history.viewRecipe(selection);
+            selection = Input.intInput("1. Back to the list\n2. Back to the search menu");
+            switch (selection) {
+                case 1:
+                    break;
+                case 2:
+                    System.out.println("Going back to the Search Menu...");
+                    return;
+            }
+        }
+        System.out.println("Going back to the main menu...");
     }
 }

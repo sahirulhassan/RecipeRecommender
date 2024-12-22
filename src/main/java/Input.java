@@ -20,10 +20,12 @@ public class Input {
     public static List<String> userStringList() {
         System.out.println("Enter your ingredients or keywords one by one.");
         System.out.println("Type 'END' when you're finished:");
+        System.out.println("Enter -1 to abort.");
         List<String> list = new ArrayList<>();
         while (true) {
             String input = scanner.nextLine().trim();
             if (input.equalsIgnoreCase("end")) {break;}
+            else if (input.equals("-1")) {return null;}
             else if (input.isBlank()) {
                 System.out.println("Input cannot be empty. Please try again.");
             }

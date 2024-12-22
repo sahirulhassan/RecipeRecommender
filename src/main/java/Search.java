@@ -13,6 +13,9 @@ public class Search {
 
     public Table byIngredients() {
         List<String> query = Input.userStringList();
+        if (query == null) {
+            return null;
+        }
         return dataset
                 .where(dataset
                         .textColumn("ingredients")
@@ -23,6 +26,10 @@ public class Search {
 
     public Table byName() {
         String name = Input.stringInput("Search recipe:");
+        if (name.isBlank()) {
+            System.out.println("Name cannot be empty.");
+            return null;
+        }
         return dataset
                 .where(dataset
                         .textColumn("name")
@@ -31,6 +38,9 @@ public class Search {
 
     public Table byKeywords() {
         List<String> keywords = Input.userStringList();
+        if (keywords == null) {
+            return null;
+        }
         return dataset
                 .where(dataset.textColumn("tags")
                         .eval(entry -> keywords.stream()

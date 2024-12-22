@@ -2,6 +2,8 @@ import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.columns.Column;
 
+import java.util.List;
+
 
 public class View {
     public static String centerAlign(String text, int width) {
@@ -45,6 +47,15 @@ public class View {
         int idx = 0;
         for (Object name : names) {
             System.out.printf("%3d %s %n", idx, name.toString().trim());
+            idx++;
+        }
+        System.out.printf("\n%3d Back\n\n", -1);
+    }
+
+    public static void recipesList(List<Row> dataset) {
+        int idx = 0;
+        for (Row recipe : dataset) {
+            System.out.printf("%3d %s %n", idx, recipe.getText("name").trim());
             idx++;
         }
         System.out.printf("\n%3d Back\n\n", -1);

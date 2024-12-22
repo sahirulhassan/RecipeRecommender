@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Switched user inputs from Array to ArrayList.">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Did some refactoring and included the recently viewed recipes feature.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/History.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/History.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Input.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Search.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -164,7 +164,7 @@
       <workItem from="1733523363800" duration="723000" />
       <workItem from="1733564291353" duration="3319000" />
       <workItem from="1733859087103" duration="112000" />
-      <workItem from="1734881348035" duration="2758000" />
+      <workItem from="1734881348035" duration="8510000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit.">
       <option name="closed" value="true" />
@@ -390,11 +390,18 @@
       <option name="project" value="LOCAL" />
       <updated>1733410277505</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Did some refactoring and included the recently viewed recipes feature.">
+      <option name="closed" value="true" />
+      <created>1734884371297</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1734884371297</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Deleted ArrayComparison.java" />
     <MESSAGE value="Enhanced search speed by using Tablesaw's where + eval lookup. Also replaced array iterations with Array streams for efficiency." />
     <MESSAGE value="Removed unused dependencies." />
     <MESSAGE value="Further enhanced the querying methods." />
@@ -419,7 +426,8 @@
     <MESSAGE value="Bit of refactoring." />
     <MESSAGE value="Cleaned up the menus looping logic." />
     <MESSAGE value="Switched user inputs from Array to ArrayList." />
-    <option name="LAST_COMMIT_MESSAGE" value="Switched user inputs from Array to ArrayList." />
+    <MESSAGE value="Did some refactoring and included the recently viewed recipes feature." />
+    <option name="LAST_COMMIT_MESSAGE" value="Did some refactoring and included the recently viewed recipes feature." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
