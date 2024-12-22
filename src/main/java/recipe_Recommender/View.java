@@ -1,6 +1,9 @@
+package recipe_Recommender;
+
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.columns.Column;
+import tech.tablesaw.io.csv.CsvReadOptions;
 
 import java.util.List;
 
@@ -9,6 +12,13 @@ public class View {
     public static RecipesList history = new RecipesList(10);
     public static RecipesList saved = new RecipesList(20);
 
+
+    public static Table datasetReader(String filepath) {
+        CsvReadOptions options = CsvReadOptions.builder(filepath)
+                .maxCharsPerColumn(13000)
+                .build();
+        return Table.read().csv(options);
+    }
 
     public static String centerAlign(String text, int width) {
         int padding = (width - text.length()) / 2;
@@ -43,8 +53,10 @@ public class View {
                         "%s\n\n",
                 desc, servings, servingSize, ingredients, steps
         );
-
-
+        history.add(recipe);
+        if (Input.stringInput("Add to saved recipes? (y/n)").equalsIgnoreCase("y")) {
+            saved.add(recipe);
+        }
     }
 
     public static void recipesList(Table dataset) {

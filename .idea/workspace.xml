@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="If a recipe is already in the recently viewed. It is removed and added at the top.">
+    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/History.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/jupyter notebooks/RecipeRecommenderDatasetPreprocessing.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/jupyter notebooks/RecipeRecommenderDatasetPreprocessing.ipynb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/Input.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RecipeRecommender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/RecipeRecommender.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/RecipesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/RecipesList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Search.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/Search.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/View.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,6 +87,7 @@
     "Gradle.RecipeRecommender [:Init.main()].executor": "Run",
     "Gradle.RecipeRecommender [:RecipeRecommender.main()].executor": "Run",
     "Gradle.RecipeRecommender [:heap.main()].executor": "Run",
+    "Gradle.RecipeRecommender [:recipe_Recommender.RecipeRecommender.main()].executor": "Run",
     "Gradle.RecipeRecommender [:test.main()].executor": "Run",
     "Gradle.RecipeRecommender [build].executor": "Run",
     "Gradle.RecipeRecommender [check].executor": "Run",
@@ -162,7 +168,7 @@
       <workItem from="1733523363800" duration="723000" />
       <workItem from="1733564291353" duration="3319000" />
       <workItem from="1733859087103" duration="112000" />
-      <workItem from="1734881348035" duration="10238000" />
+      <workItem from="1734881348035" duration="13272000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit.">
       <option name="closed" value="true" />
@@ -412,11 +418,18 @@
       <option name="project" value="LOCAL" />
       <updated>1734890350763</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes.">
+      <option name="closed" value="true" />
+      <created>1734892385205</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1734892385205</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Further enhanced the querying methods." />
     <MESSAGE value="Simplified the viewing logic by preprocessing the dataset using Python's Pandas library." />
     <MESSAGE value="Included the use-case Diagram." />
     <MESSAGE value="Organized project structure according to Gradle." />
@@ -441,7 +454,8 @@
     <MESSAGE value="Did some refactoring and included the recently viewed recipes feature." />
     <MESSAGE value="Included options to backtrack through the menus more easily." />
     <MESSAGE value="If a recipe is already in the recently viewed. It is removed and added at the top." />
-    <option name="LAST_COMMIT_MESSAGE" value="If a recipe is already in the recently viewed. It is removed and added at the top." />
+    <MESSAGE value="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
