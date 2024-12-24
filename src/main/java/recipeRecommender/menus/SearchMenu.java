@@ -1,10 +1,10 @@
-package recipe_Recommender.menus;
+package recipeRecommender.menus;
 
-import recipe_Recommender.Search;
+import recipeRecommender.Search;
 import tech.tablesaw.api.Table;
 
-import static recipe_Recommender.Input.*;
-import static recipe_Recommender.View.*;
+import static recipeRecommender.Input.*;
+import static recipeRecommender.View.*;
 
 public class SearchMenu {
     private static final int WIDTH = 100;
@@ -51,7 +51,7 @@ public class SearchMenu {
                 System.out.println(centerAlign("No recipes found.\n", WIDTH));
                 return;
             }
-            recipesList(filteredDataset);
+            viewRecipes(filteredDataset);
             int recipeNo = intInput("Enter -1 to go back or select the recipe no. to view it:");
             if (recipeNo == -1) return;
             if (recipeNo >= filteredDataset.rowCount()) { // if the recipe number is out of bounds.
@@ -59,7 +59,7 @@ public class SearchMenu {
                 continue;
             }
 
-            fullRecipe(filteredDataset.row(recipeNo));
+            viewRecipe(filteredDataset.row(recipeNo));
             int selection = intInput("1. Back to the list\n2. Back to the search menu:");
             if (selection == 2) return;
             if (selection != 1) {

@@ -1,4 +1,4 @@
-package recipe_Recommender;
+package recipeRecommender;
 
 import tech.tablesaw.api.*;
 
@@ -25,13 +25,22 @@ public class RecipesList {
         recipes.addFirst(recipe); // Add the recipe to the beginning of the list
     }
 
-    public void viewList() {
-        View.recipesList(recipes);
+    public void viewRecipes() {
+        int idx = 0;
+        for (Row recipe : recipes) {
+            System.out.printf("%3d %s %n", idx, recipe.getText("name").trim());
+            idx++;
+            if (idx > 20) {
+                if (Input.stringInput("View more recipes? (y/n)").equalsIgnoreCase("n")) {
+                    break;
+                }
+            }
+        }
     }
 
     public void viewRecipe(int index) {
         Row recipe = recipes.get(index);
-        View.fullRecipe(recipe);
+        View.viewRecipe(recipe);
     }
 
     public void delete(int index) {

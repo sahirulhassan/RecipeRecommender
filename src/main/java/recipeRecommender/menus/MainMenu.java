@@ -1,9 +1,9 @@
-package recipe_Recommender.menus;
+package recipeRecommender.menus;
 
-import recipe_Recommender.Search;
+import recipeRecommender.Search;
 
-import static recipe_Recommender.View.*;
-import static recipe_Recommender.Input.*;
+import static recipeRecommender.View.*;
+import static recipeRecommender.Input.*;
 
 public class MainMenu {
     private static final int WIDTH = 100;
@@ -22,7 +22,7 @@ public class MainMenu {
             int selection = intInput("Select from the menu:");
             switch (selection) {
                 case 1 -> new SearchMenu(search).display();
-                case 2 -> fullRecipe(search.surpriseMe());
+                case 2 -> viewRecipe(search.surpriseMe());
                 case 3 -> new ListMenu(history, "HISTORY").display();
                 case 4 -> new ListMenu(saved, "SAVED RECIPES").display();
                 case 5 -> {

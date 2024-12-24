@@ -1,4 +1,4 @@
-package recipe_Recommender;
+package recipeRecommender;
 
 import java.util.ArrayList;
 import java.util.List;

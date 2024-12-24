@@ -4,15 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes.">
+    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Handled edge cases during user input.&#10;Included options to manipulate saved and recently viewed recipes.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/Input.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/Input.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/RecipeRecommender.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/RecipeRecommender.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/RecipesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/RecipesList.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/View.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/ListMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/ListMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/MainMenu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/MainMenu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/SearchMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/SearchMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -396,7 +393,15 @@
       <option name="project" value="LOCAL" />
       <updated>1734892385205</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Handled edge cases during user input.&#10;Included options to manipulate saved and recently viewed recipes.">
+      <option name="closed" value="true" />
+      <created>1735058998500</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1735058998501</updated>
+    </task>
+    <option name="localTasksCounter" value="34" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -411,7 +416,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Simplified the viewing logic by preprocessing the dataset using Python's Pandas library." />
     <MESSAGE value="Included the use-case Diagram." />
     <MESSAGE value="Organized project structure according to Gradle." />
     <MESSAGE value="Included the use case Diagram." />
@@ -436,7 +440,8 @@
     <MESSAGE value="Included options to backtrack through the menus more easily." />
     <MESSAGE value="If a recipe is already in the recently viewed. It is removed and added at the top." />
     <MESSAGE value="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes." />
+    <MESSAGE value="Handled edge cases during user input.&#10;Included options to manipulate saved and recently viewed recipes." />
+    <option name="LAST_COMMIT_MESSAGE" value="Handled edge cases during user input.&#10;Included options to manipulate saved and recently viewed recipes." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

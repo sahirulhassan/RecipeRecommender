@@ -1,4 +1,4 @@
-package recipe_Recommender;
+package recipeRecommender;
 
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;

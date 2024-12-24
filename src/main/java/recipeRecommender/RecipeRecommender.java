@@ -1,6 +1,6 @@
-package recipe_Recommender;
+package recipeRecommender;
 
-import static recipe_Recommender.menus.MainMenu.mainMenu;
+import static recipeRecommender.menus.MainMenu.mainMenu;
 
 public class RecipeRecommender {
     public RecipeRecommender() {

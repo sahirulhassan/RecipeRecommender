@@ -1,9 +1,9 @@
-package recipe_Recommender.menus;
+package recipeRecommender.menus;
 
-import recipe_Recommender.RecipesList;
+import recipeRecommender.RecipesList;
 
-import static recipe_Recommender.Input.*;
-import static recipe_Recommender.View.*;
+import static recipeRecommender.Input.*;
+import static recipeRecommender.View.*;
 
 public class ListMenu {
     private final RecipesList list;
@@ -17,7 +17,7 @@ public class ListMenu {
     public void display() {
         while (true) {
             System.out.println(centerAlign(title, 100));
-            list.viewList();
+            list.viewRecipes();
 
             if (list.isEmpty()) {
                 System.out.println(centerAlign("No recipes available.\n", 100));

@@ -1,12 +1,9 @@
-package recipe_Recommender;
+package recipeRecommender;
 
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.columns.Column;
 import tech.tablesaw.io.csv.CsvReadOptions;
-
-import java.util.List;
-
 
 public class View {
     public static RecipesList history = new RecipesList(10);
@@ -30,7 +27,7 @@ public class View {
         System.out.println(centerAlign(subtitle, WIDTH));
     }
 
-    public static void fullRecipe(Row recipe) {
+    public static void viewRecipe(Row recipe) {
 
         int id = recipe.getInt("id");
 
@@ -68,21 +65,21 @@ public class View {
         }
     }
 
-    public static void recipesList(Table dataset) {
+    public static void viewRecipes(Table dataset) {
         Column<String> names = dataset.textColumn("name");
 
         int idx = 0;
-        for (Object name : names) {
-            System.out.printf("%3d %s %n", idx, name.toString().trim());
+        int count = 1;
+        for (String name : names) {
+            System.out.printf("%3d %s %n", idx, name.trim());
             idx++;
-        }
-    }
-
-    public static void recipesList(List<Row> dataset) {
-        int idx = 0;
-        for (Row recipe : dataset) {
-            System.out.printf("%3d %s %n", idx, recipe.getText("name").trim());
-            idx++;
+            count++;
+            if (count > 20) {
+                count = 1;
+                if (Input.stringInput("View more recipes? (y/n)").equalsIgnoreCase("n")) {
+                    break;
+                }
+            }
         }
     }
 }
