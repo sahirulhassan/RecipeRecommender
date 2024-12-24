@@ -27,7 +27,7 @@ public class SearchMenu {
             if (selection == 4) return;
 
             Table filteredDataset = searchSelector(selection);
-            if (filteredDataset == null) continue;
+            if (filteredDataset == null) continue; // skips the rest of the loop and restarts the loop.
 
             displayResults(filteredDataset);
         }

@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Refactored to better accommodate the new history and save features." />
+    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="New Menus.">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/View.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/SearchMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/SearchMenu.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -42,6 +47,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="master" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
@@ -68,36 +78,42 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.RecipeRecommender.executor": "Coverage",
-    "Downloaded.Files.Path.Enabled": "false",
-    "Gradle.Build RecipeRecommender.executor": "Run",
-    "Gradle.Download Sources.executor": "Run",
-    "Gradle.MenuTest.executor": "Run",
-    "Gradle.RecipeRecommender [:Init.main()].executor": "Run",
-    "Gradle.RecipeRecommender [:RecipeRecommender.main()].executor": "Run",
-    "Gradle.RecipeRecommender [:heap.main()].executor": "Run",
-    "Gradle.RecipeRecommender [:recipe_Recommender.RecipeRecommender.main()].executor": "Run",
-    "Gradle.RecipeRecommender [:test.main()].executor": "Run",
-    "Gradle.RecipeRecommender [build].executor": "Run",
-    "Gradle.RecipeRecommender [check].executor": "Run",
-    "Gradle.RecipeRecommender.executor": "Run",
-    "Repository.Attach.Annotations": "true",
-    "Repository.Attach.JavaDocs": "true",
-    "Repository.Attach.Sources": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/sahir/Documents/Personal/Usman Institute of Technology University/Semester III/DSA/RecipeRecommender/src/main",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "project.propCompiler"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.RecipeRecommender.executor&quot;: &quot;Coverage&quot;,
+    &quot;Downloaded.Files.Path.Enabled&quot;: &quot;false&quot;,
+    &quot;Gradle.Build RecipeRecommender.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.Download Sources.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.MenuTest.executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RecipeRecommender [:Init.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RecipeRecommender [:RecipeRecommender.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RecipeRecommender [:heap.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RecipeRecommender [:recipe_Recommender.RecipeRecommender.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RecipeRecommender [:test.main()].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RecipeRecommender [build].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RecipeRecommender [check].executor&quot;: &quot;Run&quot;,
+    &quot;Gradle.RecipeRecommender.executor&quot;: &quot;Run&quot;,
+    &quot;Repository.Attach.Annotations&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.JavaDocs&quot;: &quot;true&quot;,
+    &quot;Repository.Attach.Sources&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;prototypeMenu&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/sahir/Documents/Personal/Usman Institute of Technology University/Semester III/DSA/RecipeRecommender/src/main&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;project.propCompiler&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
+    ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\sahir\Documents\Personal\Usman Institute of Technology University\Semester III\DSA\RecipeRecommender\src\main" />
@@ -160,6 +176,8 @@
       <workItem from="1733564291353" duration="3319000" />
       <workItem from="1733859087103" duration="112000" />
       <workItem from="1734881348035" duration="13712000" />
+      <workItem from="1734897340976" duration="1293000" />
+      <workItem from="1735053269865" duration="1266000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit.">
       <option name="closed" value="true" />
@@ -425,11 +443,26 @@
       <option name="project" value="LOCAL" />
       <updated>1734895391354</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Refactored to better accommodate the new history and save features.">
+      <option name="closed" value="true" />
+      <created>1734898402636</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1734898402637</updated>
+    </task>
+    <task id="LOCAL-00035" summary="New Menus.">
+      <option name="closed" value="true" />
+      <created>1734898507678</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1734898507678</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Included the use-case Diagram." />
     <MESSAGE value="Organized project structure according to Gradle." />
     <MESSAGE value="Included the use case Diagram." />
     <MESSAGE value="Included the preprocessing logic." />
@@ -454,7 +487,8 @@
     <MESSAGE value="If a recipe is already in the recently viewed. It is removed and added at the top." />
     <MESSAGE value="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes." />
     <MESSAGE value="Refactored to better accommodate the new history and save features." />
-    <option name="LAST_COMMIT_MESSAGE" value="Refactored to better accommodate the new history and save features." />
+    <MESSAGE value="New Menus." />
+    <option name="LAST_COMMIT_MESSAGE" value="New Menus." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

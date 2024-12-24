@@ -25,6 +25,11 @@ public class View {
         return " ".repeat(Math.max(padding, 0)) + text + " ".repeat(Math.max(padding, 0));
     }
 
+    public static void printHeader(String title, String subtitle, int WIDTH) {
+        System.out.println(centerAlign(title, WIDTH));
+        System.out.println(centerAlign(subtitle, WIDTH));
+    }
+
     public static void fullRecipe(Row recipe) {
 
         int id = recipe.getInt("id");
