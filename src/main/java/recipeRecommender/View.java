@@ -61,12 +61,13 @@ public class View {
             System.out.println("Recipe saved.");
         } else {
             System.out.println("Recipe not saved.");
-            System.out.println("Going back...");
         }
     }
 
     public static void viewRecipes(Table dataset) {
         Column<String> names = dataset.textColumn("name");
+        int numberOfRecipes = names.size();
+        System.out.println(centerAlign("\nFound " + numberOfRecipes + " recipes\n", 100));
 
         int idx = 0;
         int count = 1;

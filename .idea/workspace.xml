@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Handled edge cases during user input.&#10;Included options to manipulate saved and recently viewed recipes.">
+    <list default="true" id="92ffc4f2-4e81-4bd7-8030-9bc23eeadfe5" name="Changes" comment="Limited search results to be shown in 20 recipe increments. Renamed some viewing logic.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/RecipesList.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/RecipesList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/View.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/View.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/ListMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/ListMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/MainMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/MainMenu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/SearchMenu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/recipe_Recommender/menus/SearchMenu.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +80,7 @@
     "Gradle.RecipeRecommender [:Init.main()].executor": "Run",
     "Gradle.RecipeRecommender [:RecipeRecommender.main()].executor": "Run",
     "Gradle.RecipeRecommender [:heap.main()].executor": "Run",
+    "Gradle.RecipeRecommender [:recipeRecommender.RecipeRecommender.main()].executor": "Run",
     "Gradle.RecipeRecommender [:recipe_Recommender.RecipeRecommender.main()].executor": "Run",
     "Gradle.RecipeRecommender [:test.main()].executor": "Run",
     "Gradle.RecipeRecommender [build].executor": "Run",
@@ -401,7 +397,15 @@
       <option name="project" value="LOCAL" />
       <updated>1735058998501</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Limited search results to be shown in 20 recipe increments. Renamed some viewing logic.">
+      <option name="closed" value="true" />
+      <created>1735060294889</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1735060294889</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -416,7 +420,6 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="Included the use-case Diagram." />
     <MESSAGE value="Organized project structure according to Gradle." />
     <MESSAGE value="Included the use case Diagram." />
     <MESSAGE value="Included the preprocessing logic." />
@@ -441,7 +444,8 @@
     <MESSAGE value="If a recipe is already in the recently viewed. It is removed and added at the top." />
     <MESSAGE value="Removed History Class, instead created a general RecipesList class that works for both Recently Viewed (History) and Saved Recipes." />
     <MESSAGE value="Handled edge cases during user input.&#10;Included options to manipulate saved and recently viewed recipes." />
-    <option name="LAST_COMMIT_MESSAGE" value="Handled edge cases during user input.&#10;Included options to manipulate saved and recently viewed recipes." />
+    <MESSAGE value="Limited search results to be shown in 20 recipe increments. Renamed some viewing logic." />
+    <option name="LAST_COMMIT_MESSAGE" value="Limited search results to be shown in 20 recipe increments. Renamed some viewing logic." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
