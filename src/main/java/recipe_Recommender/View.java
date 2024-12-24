@@ -61,6 +61,10 @@ public class View {
         history.add(recipe);
         if (Input.stringInput("Add to saved recipes? (y/n)").equalsIgnoreCase("y")) {
             saved.add(recipe);
+            System.out.println("Recipe saved.");
+        } else {
+            System.out.println("Recipe not saved.");
+            System.out.println("Going back...");
         }
     }
 
@@ -72,7 +76,6 @@ public class View {
             System.out.printf("%3d %s %n", idx, name.toString().trim());
             idx++;
         }
-        System.out.printf("\n%3d Back\n\n", -1);
     }
 
     public static void recipesList(List<Row> dataset) {
@@ -81,6 +84,5 @@ public class View {
             System.out.printf("%3d %s %n", idx, recipe.getText("name").trim());
             idx++;
         }
-        System.out.printf("\n%3d Back\n\n", -1);
     }
 }

@@ -26,16 +26,26 @@ public class RecipesList {
     }
 
     public void viewList() {
-        if (recipes.isEmpty()) {
-            System.out.println(View.centerAlign("No recipes yet.\n", 100));
-            return;
-        }
         View.recipesList(recipes);
     }
 
     public void viewRecipe(int index) {
         Row recipe = recipes.get(index);
         View.fullRecipe(recipe);
+    }
+
+    public void delete(int index) {
+        recipes.remove(index);
+        System.out.println("Recipe" + index + " deleted.");
+    }
+
+    public void deleteAll() {
+        recipes.clear();
+        System.out.println("All recipes deleted.");
+    }
+
+    public int getSize() {
+        return maxSize;
     }
 
     public boolean isEmpty() {

@@ -16,7 +16,7 @@ public class SearchMenu {
 
     public void display() {
         while (true) {
-            printHeader("Search Menu");
+            printHeader("Search Menu", "Search for recipes", WIDTH);
             System.out.println("""
                     1. Search by Ingredients
                     2. Search by Recipe Names
@@ -39,7 +39,7 @@ public class SearchMenu {
             case 2 -> search.byName();
             case 3 -> search.byKeywords();
             default -> {
-                System.out.println(centerAlign("Invalid option. Try again.", WIDTH));
+                System.out.println(centerAlign("Invalid option. Try again.\n", WIDTH));
                 yield null;
             }
         };
@@ -54,14 +54,17 @@ public class SearchMenu {
             recipesList(filteredDataset);
             int recipeNo = intInput("Enter -1 to go back or select the recipe no. to view it:");
             if (recipeNo == -1) return;
+            if (recipeNo >= filteredDataset.rowCount()) { // if the recipe number is out of bounds.
+                System.out.println("Error: Invalid recipe number. Try again.\n");
+                continue;
+            }
 
             fullRecipe(filteredDataset.row(recipeNo));
             int selection = intInput("1. Back to the list\n2. Back to the search menu:");
             if (selection == 2) return;
+            if (selection != 1) {
+                System.out.println("Error: Invalid selection. Try again.\n");
+            }
         }
-    }
-
-    private void printHeader(String title) {
-        System.out.println(centerAlign(title, WIDTH));
     }
 }

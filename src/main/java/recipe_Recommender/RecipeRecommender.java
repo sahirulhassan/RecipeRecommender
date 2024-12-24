@@ -1,13 +1,13 @@
 package recipe_Recommender;
 
-import recipe_Recommender.menus.Menu;
+import static recipe_Recommender.menus.MainMenu.mainMenu;
 
 public class RecipeRecommender {
-    public RecipeRecommender() throws Exception {
-        Menu.mainMenu();
+    public RecipeRecommender() {
+        mainMenu();
     }
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         new RecipeRecommender();
     }
 }

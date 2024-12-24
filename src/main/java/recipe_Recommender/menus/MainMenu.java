@@ -5,7 +5,7 @@ import recipe_Recommender.Search;
 import static recipe_Recommender.View.*;
 import static recipe_Recommender.Input.*;
 
-public class Menu {
+public class MainMenu {
     private static final int WIDTH = 100;
     private static final Search search = new Search(datasetReader("src/main/resources/dataset.csv"));
 
@@ -22,14 +22,14 @@ public class Menu {
             int selection = intInput("Select from the menu:");
             switch (selection) {
                 case 1 -> new SearchMenu(search).display();
-                case 2 -> search.surpriseMe();
+                case 2 -> fullRecipe(search.surpriseMe());
                 case 3 -> new ListMenu(history, "HISTORY").display();
                 case 4 -> new ListMenu(saved, "SAVED RECIPES").display();
                 case 5 -> {
                     System.out.println(centerAlign("Goodbye! Exiting...", WIDTH));
                     System.exit(0);
                 }
-                default -> System.out.println(centerAlign("Invalid selection. Please try again.", WIDTH));
+                default -> System.out.println(centerAlign("Error: Invalid selection. Please try again.\n", WIDTH));
             }
         }
     }
