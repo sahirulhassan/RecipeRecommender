@@ -8,6 +8,8 @@ import tech.tablesaw.io.csv.CsvReadOptions;
 public class View {
     public static RecipesList history = new RecipesList(10);
     public static RecipesList saved = new RecipesList(20);
+    public static Reviews reviews = new Reviews();
+    public static Ratings ratings = new Ratings();
 
 
     public static Table datasetReader(String filepath) {
