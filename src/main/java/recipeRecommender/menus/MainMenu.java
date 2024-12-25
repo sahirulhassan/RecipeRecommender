@@ -27,7 +27,9 @@ public class MainMenu {
                 case 2 -> viewRecipe(search.surpriseMe());
                 case 3 -> new ListMenu(history, "HISTORY").display();
                 case 4 -> new ListMenu(saved, "SAVED RECIPES").display();
-                case 5 -> {
+                case 5 -> ratings.displayRatings();
+                case 6 -> reviews.displayReviews();
+                case 7 -> {
                     System.out.println(centerAlign("Goodbye! Exiting...", WIDTH));
                     System.exit(0);
                 }
