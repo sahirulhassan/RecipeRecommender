@@ -17,7 +17,9 @@ public class MainMenu {
                     2. Surprise me
                     3. Recently Viewed
                     4. View Saved Recipes
-                    5. Exit
+                    5. View Ratings
+                    6. View Reviews
+                    7. Exit
                     """);
             int selection = intInput("Select from the menu:");
             switch (selection) {
