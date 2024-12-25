@@ -18,6 +18,7 @@ out/
 
 ### Ignore the large dataset file ###
 dataset.csv
+src/main/resources/dataset.csv
 
 
 ### Eclipse ###
