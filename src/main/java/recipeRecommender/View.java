@@ -69,6 +69,19 @@ public class View {
         } else {
             System.out.println("Recipe not saved.");
         }
+        if (Input.stringInput("Do you want to rate this recipe? (y/n)").equalsIgnoreCase("y")) {
+            int rating = Input.intInput("Rate this recipe (1-5):");
+            ratings.addRating(name, rating);
+        } else {
+            System.out.println("Rating skipped.");
+        }
+
+        if (Input.stringInput("Do you want to review this recipe? (y/n)").equalsIgnoreCase("y")) {
+            String review = Input.stringInput("Write a review for this recipe:");
+            reviews.addReview(name, review);
+        } else {
+            System.out.println("Review skipped.");
+        }
     }
 
     public static void viewRecipes(Table dataset) {
