@@ -16,6 +16,10 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
+### Ignore the large dataset file ###
+dataset.csv
+
+
 ### Eclipse ###
 .apt_generated
 .classpath
