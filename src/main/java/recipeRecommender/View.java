@@ -8,13 +8,20 @@ import tech.tablesaw.io.csv.CsvReadOptions;
 public class View {
     public static RecipesList history = new RecipesList(10);
     public static RecipesList saved = new RecipesList(20);
+    public static Reviews reviews = new Reviews();
+    public static Ratings ratings = new Ratings();
 
 
     public static Table datasetReader(String filepath) {
         CsvReadOptions options = CsvReadOptions.builder(filepath)
                 .maxCharsPerColumn(13000)
                 .build();
-        return Table.read().csv(options);
+        try {
+            return Table.read().csv(options);
+        } catch (tech.tablesaw.io.AddCellToColumnException e) {
+            System.err.println("Error reading dataset: " + e.getMessage());
+            return null; // error handling for odd entries in the dataset
+        }
     }
 
     public static String centerAlign(String text, int width) {
@@ -61,6 +68,19 @@ public class View {
             System.out.println("Recipe saved.");
         } else {
             System.out.println("Recipe not saved.");
+        }
+        if (Input.stringInput("Do you want to rate this recipe? (y/n)").equalsIgnoreCase("y")) {
+            int rating = Input.intInput("Rate this recipe (1-5):");
+            ratings.addRating(name, rating);
+        } else {
+            System.out.println("Rating skipped.");
+        }
+
+        if (Input.stringInput("Do you want to review this recipe? (y/n)").equalsIgnoreCase("y")) {
+            String review = Input.stringInput("Write a review for this recipe:");
+            reviews.addReview(name, review);
+        } else {
+            System.out.println("Review skipped.");
         }
     }
 
