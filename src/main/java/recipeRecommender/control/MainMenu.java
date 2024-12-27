@@ -1,10 +1,10 @@
-package recipeRecommender.menus;
+package recipeRecommender.control;
 
-import recipeRecommender.Search;
+import recipeRecommender.model.Search;
 
-import static recipeRecommender.RecipeRecommender.*;
-import static recipeRecommender.View.*;
-import static recipeRecommender.Input.*;
+import static recipeRecommender.Main.*;
+import static recipeRecommender.view.View.*;
+import static recipeRecommender.view.Input.*;
 
 public class MainMenu {
     private static final Search search = new Search(datasetReader("src/main/resources/dataset.csv"));

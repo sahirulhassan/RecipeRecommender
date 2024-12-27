@@ -1,11 +1,11 @@
-package recipeRecommender.menus;
+package recipeRecommender.control;
 
-import recipeRecommender.*;
+import recipeRecommender.view.Input;
 import tech.tablesaw.api.Row;
 
-import static recipeRecommender.RecipeRecommender.*;
-import static recipeRecommender.Input.intInput;
-import static recipeRecommender.View.viewRecipe;
+import static recipeRecommender.Main.*;
+import static recipeRecommender.view.Input.intInput;
+import static recipeRecommender.view.View.viewRecipe;
 
 public class RecipePage {
     private final Row recipe;

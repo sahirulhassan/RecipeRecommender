@@ -1,5 +1,6 @@
-package recipeRecommender;
+package recipeRecommender.model;
 
+import recipeRecommender.view.Input;
 import tech.tablesaw.api.*;
 
 import java.util.LinkedList;

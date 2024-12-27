@@ -1,10 +1,10 @@
-package recipeRecommender.menus;
+package recipeRecommender.control;
 
-import recipeRecommender.Search;
+import recipeRecommender.model.Search;
 import tech.tablesaw.api.Table;
 
-import static recipeRecommender.Input.*;
-import static recipeRecommender.View.*;
+import static recipeRecommender.view.Input.*;
+import static recipeRecommender.view.View.*;
 
 public class SearchMenu {
     private final Search search;

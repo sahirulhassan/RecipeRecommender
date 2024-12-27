@@ -1,4 +1,4 @@
-package recipeRecommender;
+package recipeRecommender.model;
 
 public class Review {
     private final String reviewer;

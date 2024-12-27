@@ -1,9 +1,9 @@
-package recipeRecommender.menus;
+package recipeRecommender.control;
 
-import recipeRecommender.UserList;
+import recipeRecommender.model.UserList;
 
-import static recipeRecommender.Input.*;
-import static recipeRecommender.View.*;
+import static recipeRecommender.view.Input.*;
+import static recipeRecommender.view.View.*;
 
 public class ListMenu {
     private final UserList list;

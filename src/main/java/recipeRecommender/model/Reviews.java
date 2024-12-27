@@ -1,4 +1,6 @@
-package recipeRecommender;
+package recipeRecommender.model;
+
+import recipeRecommender.view.View;
 
 import java.util.List;
 import java.util.ArrayList;

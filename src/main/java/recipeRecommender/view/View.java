@@ -1,11 +1,11 @@
-package recipeRecommender;
+package recipeRecommender.view;
 
 import tech.tablesaw.api.Row;
 import tech.tablesaw.api.Table;
 import tech.tablesaw.columns.Column;
 import tech.tablesaw.io.csv.CsvReadOptions;
 
-import static recipeRecommender.RecipeRecommender.width;
+import static recipeRecommender.Main.width;
 
 public class View {
 
