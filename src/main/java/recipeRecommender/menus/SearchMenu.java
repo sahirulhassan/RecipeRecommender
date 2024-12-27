@@ -7,7 +7,6 @@ import static recipeRecommender.Input.*;
 import static recipeRecommender.View.*;
 
 public class SearchMenu {
-    private static final int WIDTH = 100;
     private final Search search;
 
     public SearchMenu(Search search) {
@@ -16,7 +15,7 @@ public class SearchMenu {
 
     public void display() {
         while (true) {
-            printHeader("Search Menu", "Search for recipes", WIDTH);
+            printHeader("Search Menu", "Search for recipes");
             System.out.println("""
                     1. Search by Ingredients
                     2. Search by Recipe Names
@@ -39,7 +38,7 @@ public class SearchMenu {
             case 2 -> search.byName();
             case 3 -> search.byKeywords();
             default -> {
-                System.out.println(centerAlign("Invalid option. Try again.\n", WIDTH));
+                System.out.println(centerAlign("Invalid option. Try again.\n"));
                 yield null;
             }
         };
@@ -48,7 +47,7 @@ public class SearchMenu {
     private void displayResults(Table filteredDataset) {
         while (true) {
             if (filteredDataset.isEmpty()) {
-                System.out.println(centerAlign("No recipes found.\n", WIDTH));
+                System.out.println(centerAlign("No recipes found.\n"));
                 return;
             }
             viewRecipes(filteredDataset);
@@ -58,13 +57,7 @@ public class SearchMenu {
                 System.out.println("Error: Invalid recipe number. Try again.\n");
                 continue;
             }
-
-            viewRecipe(filteredDataset.row(recipeNo));
-            int selection = intInput("1. Back to the list\n2. Back to the search menu:");
-            if (selection == 2) return;
-            if (selection != 1) {
-                System.out.println("Error: Invalid selection. Try again.\n");
-            }
+            new RecipePage(filteredDataset.row(recipeNo)).display();
         }
     }
 }

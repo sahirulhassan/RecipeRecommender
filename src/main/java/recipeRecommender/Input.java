@@ -14,8 +14,14 @@ public class Input {
 
     public static int intInput(String msg) {
         System.out.println(msg);
-        int output = scanner.nextInt();
-        scanner.nextLine();
+        int output = 0;
+        try {
+            output = scanner.nextInt();
+            scanner.nextLine();
+        } catch (Exception e) {
+            System.out.println("Invalid input. Please enter a valid number.");
+            intInput(msg);
+        }
         return output;
     }
 

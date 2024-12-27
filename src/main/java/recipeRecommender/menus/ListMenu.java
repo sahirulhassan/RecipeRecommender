@@ -1,26 +1,26 @@
 package recipeRecommender.menus;
 
-import recipeRecommender.RecipesList;
+import recipeRecommender.UserList;
 
 import static recipeRecommender.Input.*;
 import static recipeRecommender.View.*;
 
 public class ListMenu {
-    private final RecipesList list;
+    private final UserList list;
     private final String title;
 
-    public ListMenu(RecipesList list, String title) {
+    public ListMenu(UserList list, String title) {
         this.list = list;
         this.title = title;
     }
 
     public void display() {
         while (true) {
-            System.out.println(centerAlign(title, 100));
-            list.viewRecipes();
+            System.out.println(centerAlign(title));
+            list.view();
 
             if (list.isEmpty()) {
-                System.out.println(centerAlign("No recipes available.\n", 100));
+                System.out.println(centerAlign("No recipes available.\n"));
                 return;
             }
 
@@ -50,9 +50,7 @@ public class ListMenu {
                 continue;
             }
 
-            list.viewRecipe(selection);
-            int action = intInput("1. Back to the list\n2. Back to the main menu:");
-            if (action == 2) return;
+            new RecipePage(list.getRecipe(selection)).display();
         }
     }
 }
