@@ -20,7 +20,8 @@ public class Input {
             scanner.nextLine();
         } catch (Exception e) {
             System.out.println("Invalid input. Please enter a valid number.");
-            intInput(msg);
+            scanner.nextLine();
+            output = intInput(msg);
         }
         return output;
     }
