@@ -1,17 +1,12 @@
 package recipeRecommender.control;
 
-import recipeRecommender.model.Search;
 import tech.tablesaw.api.Table;
 
+import static recipeRecommender.Main.search;
 import static recipeRecommender.view.Input.*;
 import static recipeRecommender.view.View.*;
 
 public class SearchMenu {
-    private final Search search;
-
-    public SearchMenu(Search search) {
-        this.search = search;
-    }
 
     public void display() {
         while (true) {

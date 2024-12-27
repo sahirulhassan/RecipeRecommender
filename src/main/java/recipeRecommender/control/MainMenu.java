@@ -1,13 +1,10 @@
 package recipeRecommender.control;
 
-import recipeRecommender.model.Search;
-
 import static recipeRecommender.Main.*;
 import static recipeRecommender.view.View.*;
 import static recipeRecommender.view.Input.*;
 
 public class MainMenu {
-    private static final Search search = new Search(datasetReader("src/main/resources/dataset.csv"));
 
     public static void mainMenu() {
         while (true) {
@@ -22,7 +19,7 @@ public class MainMenu {
                     """);
             int selection = intInput("Select from the menu:");
             switch (selection) {
-                case 1 -> new SearchMenu(search).display();
+                case 1 -> new SearchMenu().display();
                 case 2 -> new RecipePage(search.surpriseMe()).display();
                 case 3 -> new ListMenu(history, "HISTORY").display();
                 case 4 -> new ListMenu(saved, "SAVED RECIPES").display();
@@ -31,10 +28,7 @@ public class MainMenu {
                     System.out.println(centerAlign("Goodbye! Exiting..."));
                     System.exit(0);
                 }
-                default -> {
-                    System.out.println(centerAlign("Error: Invalid selection. Please try again.\n"));
-                    continue;
-                }
+                default -> System.out.println(centerAlign("Error: Invalid selection. Please try again.\n"));
             }
         }
     }

@@ -1,17 +1,20 @@
 package recipeRecommender;
 
 import recipeRecommender.model.Reviews;
+import recipeRecommender.model.Search;
 import recipeRecommender.model.UserList;
 import recipeRecommender.view.Input;
 
 import static recipeRecommender.view.View.centerAlign;
 import static recipeRecommender.control.MainMenu.mainMenu;
+import static recipeRecommender.view.View.datasetReader;
 
 public class Main {
     public static String username;
     public static UserList history;
     public static UserList saved;
     public static Reviews reviews;
+    public static Search search;
     public static int width;
 
     public Main() {
@@ -23,6 +26,7 @@ public class Main {
         saved = new UserList(10);
         reviews = new Reviews();
         width = 100;
+        search = new Search(datasetReader("src/main/resources/dataset.csv"));
         mainMenu();
     }
 
