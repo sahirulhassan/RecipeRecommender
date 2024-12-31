@@ -13,12 +13,7 @@ public class View {
         CsvReadOptions options = CsvReadOptions.builder(filepath)
                 .maxCharsPerColumn(13000)
                 .build();
-        try {
-            return Table.read().csv(options);
-        } catch (tech.tablesaw.io.AddCellToColumnException e) {
-            System.err.println("Error reading dataset: " + e.getMessage());
-            return null; // error handling for odd entries in the dataset
-        }
+        return Table.read().csv(options);
     }
 
     public static String centerAlign(String text) {
