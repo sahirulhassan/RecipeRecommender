@@ -14,7 +14,7 @@ public class Input {
 
     public static int intInput(String msg) {
         System.out.println(msg);
-        int output = 0;
+        int output;
         try {
             output = scanner.nextInt();
             scanner.nextLine();
@@ -39,6 +39,10 @@ public class Input {
                 System.out.println("Input cannot be empty. Please try again.\n");
             }
             else {list.add(input);}
+        }
+        if (list.isEmpty()) {
+            System.out.println("List cannot be empty. Please try again.");
+            return null;
         }
         return list;
     }
