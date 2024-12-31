@@ -19,10 +19,7 @@ public class UserList {
         if (recipes.size() == maxSize) { // Remove the last recipe if the history is full
             recipes.removeLast();
         }
-        if (recipes.contains(recipe)) { // Remove the recipe if it already exists in the history
-            recipes.remove(recipe);
-        }
-
+        recipes.remove(recipe); // Remove the recipe if it already exists in the history
         recipes.addFirst(recipe); // Add the recipe to the beginning of the list
     }
 
