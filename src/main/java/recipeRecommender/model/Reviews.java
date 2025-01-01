@@ -37,9 +37,7 @@ public class Reviews {
         for (Map.Entry<Integer, List<Review>> entry : reviews.entrySet()) {
             System.out.println("\nRecipe: " + entry.getKey());
             for (Review review : entry.getValue()) {
-                System.out.println("- Reviewer: " + review.getReviewer());
-                System.out.println("  Rating: " + review.getRating());
-                System.out.println("  Review: " + review.getReview());
+                System.out.println(review);
             }
         }
     }
@@ -52,9 +50,7 @@ public class Reviews {
         }
         System.out.println("\nRecipe: " + id);
         for (Review review : reviews.get(id)) {
-            System.out.println("- Reviewer: " + review.getReviewer());
-            System.out.println("  Rating: " + review.getRating());
-            System.out.println("  Review: " + review.getReview());
+            System.out.println(review);
         }
     }
 }

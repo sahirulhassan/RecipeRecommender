@@ -11,15 +11,8 @@ public class Review {
         this.rating = rating;
     }
 
-    public String getReviewer() {
-        return reviewer;
-    }
-
-    public String getReview() {
-        return review;
-    }
-
-    public int getRating() {
-        return rating;
+    @Override
+    public String toString() {
+        return "Reviewer: " + reviewer + "\nRating: " + rating + "\nReview: " + review;
     }
 }
