@@ -9,11 +9,11 @@ import static recipeRecommender.Main.width;
 
 public class View {
 
-    public static Table datasetReader(String filepath) {
+    public static Table datasetReader(String filepath) { // to customize how the CSV file should be read
         CsvReadOptions options = CsvReadOptions.builder(filepath)
                 .maxCharsPerColumn(13000)
-                .build();
-        return Table.read().csv(options);
+                .build(); // build instantiates the CsvReadOptions object.
+                return Table.read().csv(options);
     }
 
     public static String centerAlign(String text) {

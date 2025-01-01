@@ -46,13 +46,13 @@ public class SearchMenu {
                 return;
             }
             viewRecipes(filteredDataset);
-            int recipeNo = intInput("Enter -1 to go back or select the recipe no. to view it:");
-            if (recipeNo == -1) return;
-            if (recipeNo >= filteredDataset.rowCount()) { // if the recipe number is out of bounds.
+            int selection = intInput("Enter -1 to go back or select the recipe no. to view it:");
+            if (selection == -1) return;
+            if (selection >= filteredDataset.rowCount()) { // if the recipe number is out of bounds.
                 System.out.println("Error: Invalid recipe number. Try again.\n");
                 continue;
             }
-            new RecipePage(filteredDataset.row(recipeNo)).display();
+            new RecipePage(filteredDataset.row(selection)).display();
         }
     }
 }
